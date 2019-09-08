@@ -4,7 +4,7 @@
 
     vars:
       - PATH_TO_APP: /home/ec2-user/
-      - ARTIFACT_REPOSITORY_PATH_URL: ~/.m2/repository/com/mycompany/microservices-template/
+      - ARTIFACT_REPOSITORY_PATH_URL: ~/.m2/repository/com/mycompany/microservices-template
       - VERSION: 1.0.1-SNAPSHOT
     
     tasks:
