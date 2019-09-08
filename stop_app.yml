@@ -1,0 +1,11 @@
+---
+  - hosts: webservers
+    become: true
+
+    tasks:
+      - name: Find running process
+        command: pgrep java
+        register: RUNNING_PROCESS
+
+      - name: Killing the microservices-template java process
+        command: "kill -9 {{ RUNNING_PROCESS }}"

@@ -9,3 +9,12 @@
     tasks:
       - name: Starting  microservices-template-{{ VERSION }}.jar
         command: nohup java -jar {{ PATH_TO_APP }}/microservices-template-{{ VERSION }}.jar &
+        poll: 0
+
+      - name: Check app is running
+        command: ps -ef | grep java
+        register: PROCESS_OUTPUT
+      
+      - name: List process output
+        debug:
+          msg: "{{ PROCESS_OUTPUT }}"
