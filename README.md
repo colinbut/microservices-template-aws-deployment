@@ -46,5 +46,11 @@ note* - due to network latencies this ansible task within might take a very long
 ansible-playbook -i hosts start_app.yml
 ```
 
+### Comments
+
+1. This assumes prior Ansible knowledge.
+2. Feel free to fork this repo or copy contents of this repo and use as your reference
+3. Feel free to change the Ansible deployment scripts as per your needs
+
 ### Maintainer
 Colin But (colin.but@outlook.com)
