@@ -2,10 +2,8 @@
   - hosts: webservers
     become: true
 
-    vars:
-      - PATH_TO_APP: /home/ec2-user/
-      - ARTIFACT_REPOSITORY_PATH_URL: ~/.m2/repository/com/mycompany/microservices-template
-      - VERSION: 1.0.1-SNAPSHOT
+    vars_files:
+      - vars/variables.yml
     
     tasks:
       - name: Copy artifact microservices-template-{{ VERSION }}.jar from {{ ARTIFACT_REPOSITORY_PATH_URL }}/{{ VERSION }} to server app working dir {{ PATH_TO_APP }}
